@@ -1,2 +1,30 @@
 mlflow.db
 mlruns/
+mlartifacts
+
+#Models
+models/*.joblib
+
+#logs
+logs/
+*.logs
+#Pyhton
+__pycache__/
+.*_pyc 
+
+ # Virtual env
+ .venv
+ venv
+
+ #OS
+ .DS_Store
+ Thumbs.db
+
+ # Notebook Checkpoints
+ .ipynb_checkpoint
+
+ # temporary
+ *.tmp 
+ *.pkl
+ .sfdx/
+ *.cls

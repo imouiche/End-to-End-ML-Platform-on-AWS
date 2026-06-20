@@ -1,10 +1,18 @@
 # 🏥 Healthcare AI System
 
-> **Production First Architecture. Not Slideware.** — #ArchitectMindset
+# Production-First ML Pipeline: Raw Data to AWS Kubernetes
 
-An end-to-end enterprise ML system built on real hospital data — from raw CSVs to AWS Kubernetes deployment, with full MLOps tooling, monitoring, and governance.
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/AWS_EKS-FF9900?logo=amazonaws&logoColor=white)
+![MLflow](https://img.shields.io/badge/MLflow-0194E2?logo=mlflow&logoColor=white)
 
-[![Udemy Coupon](https://img.shields.io/badge/Udemy-RAHUL90OFF-green)](https://www.udemy.com/course/ai-system-design-mlops-from-raw-data-to-aws-kubernetes/?couponCode=2C53F66AED641DA982D2)
+> End-to-end MLOps proof of concept. From raw CSV ingestion to a containerized
+> prediction API deployed on AWS EKS, with drift monitoring and an automated
+> retraining loop.
+
+**Pipeline:** Raw CSVs → SQL → EDA → ML → MLflow → DVC → FastAPI → Docker → EKS → Monitoring
 
 
 ![Capstone Architecture](images/capstone_architecture.png)
@@ -369,7 +377,7 @@ export AWS_REGION=us-east-1
 export CLUSTER_NAME=healthcare-eks
 export ECR_REGISTRY=260597895391.dkr.ecr.us-east-1.amazonaws.com
 # add policies to the user 
- AmazonEKSClusterPolicy
+AmazonEKSClusterPolicy
 AmazonEKSServicePolicy
 AmazonEKSWorkerNodePolicy
 AmazonEC2ContainerRegistryReadOnly
@@ -403,11 +411,11 @@ kubectl get svc
 | Claim Outcome | Logistic Regression (baseline) | ~47% | 0.43 |
 | Claim Outcome | **Random Forest (final)** | **~55%** | **0.51** |
 
-> ⚠️ **Note:** This project intentionally demonstrates two data scenarios — random synthetic labels (Phase 3A) and clinically-derived labels (Phase 3B). The above numbers reflect Phase 3B (good data). This is a core teaching point of the course. On the same line, claim data needs to be fixed.
+> ⚠️ **Note:** This project intentionally demonstrates two data scenarios — random synthetic labels (Phase 3A) and clinically-derived labels (Phase 3B). The above numbers reflect Phase 3B (good data). On the same line, claim data needs to be fixed.
 
 ---
 
-## 🔍 Key Teaching Points
+## 🔍 Key Points
 
 - **Label quality over model tuning** — same pipeline, 45% → 95% accuracy by fixing the data, not the model
 - **Time-based train/test split** — leakage-safe evaluation for temporal data
@@ -429,20 +437,16 @@ Assignment:- Fix Claim Data labels and then train the model.
 ---
 
 ## Enroll here
-[![Udemy Coupon](https://img.shields.io/badge/Udemy-RAHUL90OFF-green)](https://www.udemy.com/course/ai-system-design-mlops-from-raw-data-to-aws-kubernetes/?couponCode=2C53F66AED641DA982D2)
+
 
 ## 👨‍💻 Author
+**Inoussa Mouiche**
+PhD in Computer Science,
+AI/ML Researcher . 7+ in Healthcare Industry
 
-**Rahul Sahay**
-Principal Architect · Datamatics
-7× Microsoft MVP · IIT Madras AI/ML
-Udemy Instructor · 47K+ Students
+Used as POC from an udemy couse tought by *Rahul Sahay* Principal Architect · Datamatics
+7× Microsoft MVP · [![Udemy Coupon](https://img.shields.io/badge/Udemy-RAHUL90OFF-green)](https://www.udemy.com/course/ai-system-design-mlops-from-raw-data-to-aws-kubernetes/?couponCode=2C53F66AED641DA982D2)
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Rahul_Sahay-blue)](https://linkedin.com/in/rahulsahay19)
-[![Udemy](https://img.shields.io/badge/Udemy-Courses-orange)](https://www.udemy.com/user/rahulsahay-2)
-
-🔗 Full course & architecture guide:
-https://rahulsahay.com
 
 > *Production First Architecture. Not Slideware.* — **#ArchitectMindset**
 

@@ -401,6 +401,11 @@ kubectl get deployments
 kubectl get pods
 kubectl get svc
 ```
+
+Important: This cluster will start costing money. When done testing, delete it.
+```bash
+eksctl delete cluster --name healthcare-eks --region us-east-1
+```
 ## 📊 Model Performance
 
 | Model | Algorithm | Test Accuracy | Weighted F1 |
